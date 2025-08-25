@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Système de design pour portfolio professionnel étudiant
+   Palette sobre et élégante : bleu marine, gris neutres, accents discrets
+   Design épuré et moderne pour une expérience utilisateur optimale
+*/
+
+@layer base {
+  :root {
+    /* Couleurs de base - Thème clair professionnel */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 4.9%;
+
+    /* Surfaces et cartes */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    /* Couleurs principales - Bleu professionnel */
+    --primary: 215 28% 17%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Couleurs secondaires - Gris sophistiqué */
+    --secondary: 210 20% 98%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* Couleurs d'accent - Bleu discret */
+    --accent: 214 32% 91%;
+    --accent-foreground: 215 25% 27%;
+
+    /* Couleurs atténuées */
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Couleurs de danger */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Bordures et inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 28% 17%;
+
+    /* Gradients subtils et élégants */
+    --gradient-primary: linear-gradient(135deg, hsl(215 28% 17%), hsl(215 25% 27%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 20% 98%), hsl(214 32% 91%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(214 32% 91% / 0.3) 50%, hsl(210 20% 98%) 100%);
+    
+    /* Ombres subtiles et professionnelles */
+    --shadow-primary: 0 4px 16px -4px hsl(215 28% 17% / 0.1);
+    --shadow-secondary: 0 2px 8px -2px hsl(215 28% 17% / 0.08);
+    --shadow-glow: 0 0 20px hsl(215 28% 17% / 0.15);
+
+    /* Transitions fluides et discrètes */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    /* Variables pour barres de navigation */
+    --nav-background: hsl(0 0% 100% / 0.95);
+    --nav-border: hsl(214 32% 91% / 0.8);
+  }
+
+  .dark {
+    /* Mode sombre épuré pour accessibilité */
+    --background: 222 84% 4.9%;
+    --foreground: 210 20% 98%;
+
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 222 84% 4.9%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 20% 98%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 20% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 212 72% 59%;
+
+    --nav-background: hsl(222 84% 4.9% / 0.95);
+    --nav-border: hsl(217 32% 17% / 0.8);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ombres subtiles et professionnelles */
+  .shadow-elegant {
+    box-shadow: var(--shadow-primary);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-secondary);
+  }
+
+  /* Animations douces et discrètes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animation de progression pour les barres de compétences */
+  .animate-progress {
+    animation: progressFill 1.2s ease-out forwards;
+  }
+
+  @keyframes progressFill {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--progress-width);
+    }
+  }
+
+  /* Scroll fluide pour toute la page */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Style minimaliste pour la scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Amélioration de l'accessibilité */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Focus visible pour l'accessibilité */
+  .focus-outline:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
