@@ -15,48 +15,50 @@ import { Button } from '@/components/ui/button';
 // Configuration des projets (facile à modifier)
 const projets = [
 
-  /*
+  
   {
-    titre: "Système de Gestion Bibliotheque",
-    description: "Application web complète pour la gestion d'une bibliothèque universitaire avec système d'authentification, gestion des emprunts et interface admin.",
-    technologies: ["Java", "Spring Boot", "PostgreSQL", "React", "Docker"],
-    categorie: "academique",
-    image: "📚",
+    titre: "Site Internet Professionnel",
+    description: "C'est un site web vitrine développé pour un client professionnel, mettant en avant ses services et réalisations.Cette plateforme est conçue pour offrir une expérience utilisateur fluide et engageante.",
+    technologies: ["HTML", "CSS", "JS"],
+    categorie: "personnel",
+    image: "💪",
     liens: {
-      github: "https://github.com/username/bibliotheque-system",
-      demo: "https://demo-bibliotheque.com"
+      github: "",
+      demo: ""
     },
     statut: "Terminé",
-    duree: "4 mois"
+    duree: "2 semaines"
   },
 
   
   {
-    titre: "Assistant IA Personnel",
-    description: "Chatbot intelligent utilisant l'API OpenAI pour aider les étudiants dans leurs révisions et organisation du travail.",
-    technologies: ["Python", "OpenAI API", "FastAPI", "React", "WebSocket"],
+    titre: "Site de E-commerce semi-dynamique",
+    description: "Ce Site de e-commerce semi-dynamique est une plateforme en ligne qui permet aux utilisateurs de parcourir et d'acheter des produits. Il intègre des fonctionnalités dynamiques pour améliorer l'expérience utilisateur tout en utilisant des technologies web modernes comme une rédirection vers whatsapp pour la terminaison de l'achat.",
+    technologies: ["HTML", "CSS", "JAVASCRIPT"],
     categorie: "personnel",
-    image: "🤖",
+    image: "🛒",
     liens: {
-      github: "https://github.com/username/ai-assistant",
-      demo: "https://ai-assistant-demo.com"
+      github: "",
+      demo: ""
     },
     statut: "En cours",
-    duree: "2 mois"
+    duree: "1 mois"
   },
+  
   {
-    titre: "Plateforme E-learning",
-    description: "Solution de formation en ligne avec système de quiz interactifs, suivi de progression et certificats automatiques.",
-    technologies: ["Node.js", "Express", "MongoDB", "Vue.js", "Socket.io"],
+    titre: "Assistant IA pour la prise en charge dans les services médicaux",
+    description: "Projet développé lors du Hackathon AbiHack Google 2025 visant à créer un assistant intelligent pour améliorer la prise en charge des patients dans les services médicaux. L'assistant utilise des technologies d'IA basés sous Google pour fournir des recommandations et automatiser certaines tâches administratives.C'est un projet réalisé par un groupe de 4 personnes dont j'ai occupé de LEAD DEV et assistant developpeur Backend IA",
+    technologies: ["Python", "Google Cloud", "MySQL", "Gemini AI"],
     categorie: "hackathon",
     image: "🎓",
     liens: {
-      github: "https://github.com/username/elearning-platform"
+      github: ""
     },
-    statut: "Lauréat",
+    statut: "Terminé",
     duree: "48h",
-    prix: "1er Prix - Hackathon Education 2024"
-  },
+    prix: "Certificat de participation et réseautage avec des professionnels du secteur"
+  }
+  /*
   {
     titre: "App Mobile Fitness",
     description: "Application mobile de suivi sportif avec planification d'entraînements, tracking GPS et communauté sociale.",
@@ -307,7 +309,7 @@ export default function ProjetsSection() {
               numero: [...new Set(projets.flatMap(p => p.technologies))].length.toString(), 
               label: "Technologies", 
               icone: "⚡",
-              description: "Outils et langages maîtrisés"
+              description: "Outils et langages utilisés"
             }
           ].map((stat, index) => (
             <div 

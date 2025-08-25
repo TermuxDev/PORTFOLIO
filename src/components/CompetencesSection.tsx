@@ -18,9 +18,9 @@ const competences = {
     icone: Code,
     couleur: "primary",
     items: [
-      { nom: "Python", niveau: 40, description: "Scripts, developpement web" },
-      { nom: "PHP", niveau: 30, description: "Programmation backend web" },
-      { nom: "JavaScript", niveau: 35, description: "Développement web , Script" },
+      { nom: "Python", niveau: 30, description: "Scripts, developpement web" },
+      { nom: "PHP", niveau: 20, description: "Programmation backend web" },
+      { nom: "JavaScript", niveau: 25, description: "Développement web , Script" },
       { nom: "SQL", niveau: 20, description: "Gestion et requêtes de bases de données" },
     ]
   },
@@ -29,7 +29,7 @@ const competences = {
     icone: Layers,
     couleur: "secondary",
     items: [
-      { nom: "MVC/MVP", niveau: 25, description: "Patterns de conception" },
+      { nom: "MVC/MVP", niveau: 15, description: "Patterns de conception" },
       //{ nom: "Microservices", niveau: 65, description: "Architecture distribuée" },
       { nom: "API REST", niveau: 10, description: "Conception et consommation d'APIs" },
       //{ nom: "Clean Architecture", niveau: 70, description: "Principes SOLID" },
@@ -51,7 +51,7 @@ const competences = {
     icone: Settings,
     couleur: "primary",
     items: [
-      { nom: "Git/GitHub", niveau: 55, description: "Contrôle de version" },
+      { nom: "Git/GitHub", niveau: 50, description: "Contrôle de version" },
       //{ nom: "Docker", niveau: 75, description: "Conteneurisation d'applications" },
       { nom: "Linux/Terminal", niveau: 20, description: "Administration système d'exploitation" },
       { nom: "Suite Office", niveau: 30, description: "Productivité et documentation" },
